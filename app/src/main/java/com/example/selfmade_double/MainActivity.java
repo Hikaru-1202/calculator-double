@@ -772,18 +772,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (btnText.equals(number_add)) {
             checker = true;
             arithmetic = 1;
+            numdec = false;
+            decdig = 0;
+            decbox = 1;
             numres.setText(String.valueOf(numint1)+"+");
         } else if (btnText.equals(number_min)) {
             checker = true;
             arithmetic = 2;
+            numdec = false;
+            decdig = 0;
+            decbox = 1;
             numres.setText(String.valueOf(numint1)+"-");
         } else if (btnText.equals(number_mul)) {
             checker = true;
             arithmetic = 3;
+            numdec = false;
+            decdig = 0;
+            decbox = 1;
             numres.setText(String.valueOf(numint1)+"*");
         } else if (btnText.equals(number_div)) {
             checker = true;
             arithmetic = 4;
+            numdec = false;
+            decdig = 0;
+            decbox = 1;
             numres.setText(String.valueOf(numint1)+"/");
         } else if (btnText.equals(number_dot)) {
             Log.v("MY_LOG", ".");
@@ -793,22 +805,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numint1 += numint2;
                 numres.setText(String.valueOf(numint1));
                 numint2 = 0;
+                numdec = false;
+                decdig = 0;
+                decbox = 1;
             } else if (arithmetic == 2) {
                 numint1 -= numint2;
                 numres.setText(String.valueOf(numint1));
                 numint2 = 0;
+                numdec = false;
+                decdig = 0;
+                decbox = 1;
             } else if (arithmetic == 3) {
                 numint1 *= numint2;
                 numres.setText(String.valueOf(numint1));
                 numint2 = 0;
+                numdec = false;
+                decdig = 0;
+                decbox = 1;
             }else {
                 if (numint2 == 0){
                     numres.setText("Error");
                     numint2 = 0;
+                    numdec = false;
+                    decdig = 0;
+                    decbox = 1;
                 }else {
                     numint1 /= numint2;
                     numres.setText(String.valueOf(numint1));
                     numint2 = 0;
+                    numdec = false;
+                    decdig = 0;
+                    decbox = 1;
                 }
             }
         } else if (btnText.equals(number_C)) {
